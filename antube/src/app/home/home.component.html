@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+<main>
+    <section class="ml-5">
+            <img   [src]="cap_video.snippet.thumbnails.medium.url " > 
+    </section>
+    <h2 class="ml-4 text-uppercase">atube trends</h2>
+    <section class="card-columns  pt-4 ">
+        
+        <section class="card ml-4 mr-4 mt-2"   *ngFor="let v of videos">
+            <a [routerLink]="[ '/video',v.id+v.snippet.title]"><img class="card-img-top "  [src]="v.snippet.thumbnails.medium.url " > </a>
+            <section class="card-body">
+                <p class="card-title">
+                    {{v.snippet.title}}
+                </p>
+            </section>
+        </section>
+    </section>
+</main>

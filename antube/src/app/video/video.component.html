@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<main class="mt-5"> 
+        <section class=""><h2 class="ml-2 mr-2 ">{{title}}</h2></section>
+       <section > <iframe  class="ml-2 mr-2  "  [src]="videoId | safe"></iframe></section>
+        <section>
+       <button class=" ml-2" (click)="showdes()">Description</button>
+       <button (click)="addto(v_id)">Add to favourites</button>
+       </section>
+       <section class="container-fluid">
+           <h3 class="text-uppercase">{{d}}</h3>
+           <p>{{my_desc}}</p></section>
+    </main>

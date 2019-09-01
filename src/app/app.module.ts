@@ -9,6 +9,7 @@ import { Component1Component, SafePipe } from './component1/component1.component
 import { VideoShowComponent } from './video-show/video-show.component';
 import { NewComComponent } from './new-com/new-com.component';
 import { NavComComponent } from './component1/nav-com/nav-com.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavComComponent } from './component1/nav-com/nav-com.component';
     SafePipe,
     VideoShowComponent,
     NewComComponent,
-    NavComComponent
+    NavComComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

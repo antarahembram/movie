@@ -1,0 +1,6 @@
+<app-nav></app-nav>
+<main>
+    <section *ngFor="let p of fav">
+        <iframe [src]="url1+p.videoId | safe"></iframe>
+    </section>
+</main>

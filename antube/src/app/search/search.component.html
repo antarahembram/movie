@@ -1,0 +1,14 @@
+<app-nav></app-nav>
+<main>
+    <section class="row ml-4 mr-4 mt-4"   *ngFor="let v of videos">
+        <section class="col-3">
+             <a [routerLink]="[ '/video',v.id.videoId+v.snippet.title]"><img class="card-img-top "  [src]="v.snippet.thumbnails.medium.url " > </a>
+        </section>   
+        <section class="col-9">
+               <a [routerLink]="[ '/video',v.id.videoId+v.snippet.title]"><h5 class="card-title card-link ">
+                   {{v.snippet.title}}
+                </h5>
+                </a>
+            </section>
+    </section>
+</main>

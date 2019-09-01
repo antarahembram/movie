@@ -1,0 +1,21 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler justify-content-right" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Atube</a>
+      
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+              <a class="nav-link " [routerLink]="['/playlist']" >Playlist</a>
+            </li>
+          </ul>
+            <input #search_text class="form-control " type="search" placeholder="Search" >
+            <button class="btn btn-outline-success" type="submit" (click)="s(search_text.value)">Search</button>
+        </div>
+      </nav>   
+</header>
