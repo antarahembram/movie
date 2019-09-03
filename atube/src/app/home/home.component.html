@@ -12,11 +12,11 @@
                 </h5>
             </section>
             <section class="card-footer">
-               
-                    <button class="btn btn-success" (click)=addto(v.id,v.snippet.title)>Add to Playlist</button> 
-                   
+              {{v.snippet.title}}
+                 <!--   <button class="btn btn-success" (click)=addto(v.id,v.snippet.title)>Add to Playlist</button> 
+                 -->
                      <!-- Button to Open the Modal -->
-                    <!-- <ng-template #content let-modal>
+                     <ng-template #content let-modal>
                             <div class="modal-header">
                               <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
                               <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -32,6 +32,7 @@
                                     <div class="input-group-append">
                                       <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
                                     </div>
+                                    
                                   </div>
                                 </div>
                               </form>
@@ -44,7 +45,7 @@
                           <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
                           
                           <hr>
-                        -->  
+    
                 </section>
             
         </section>
