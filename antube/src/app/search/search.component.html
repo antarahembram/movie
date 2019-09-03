@@ -1,14 +1,13 @@
 <app-nav></app-nav>
 <main>
-    <section class="row ml-4 mr-4 mt-4"   *ngFor="let v of videos">
-        <section class="col-3">
-             <a [routerLink]="[ '/video',v.id.videoId+v.snippet.title]"><img class="card-img-top "  [src]="v.snippet.thumbnails.medium.url " > </a>
-        </section>   
-        <section class="col-9">
-               <a [routerLink]="[ '/video',v.id.videoId+v.snippet.title]"><h5 class="card-title card-link ">
-                   {{v.snippet.title}}
-                </h5>
-                </a>
-            </section>
+    <section class="row  ml-5  mt-5 pt-4 mr-5" *ngFor="let v of videos">
+        <section class="col-sm-3 ml-2 mr-2"><iframe class="mt-2 mb-2 ml-1 mr-1 rounded" [src]="url1+v.id.videoId | safe"></iframe></section>
+        <section class="col-sm-8 ml-2 mr-2 "><a class="font-weight-bold"[routerLink]="[ '/video',v.id.videoId+v.snippet.title]"><h4>{{v.snippet.title}}</h4></a>
+            
+            <p class="font-weight-bold">{{v.snippet.channelTitle }}</p>
+            <p>{{v.snippet.description}} </p>
+            
+            <button class="btn btn-success " (click)="addto(v.id.videoId,v.snippet.title)">Add to Playlist</button>
+        </section>
     </section>
 </main>

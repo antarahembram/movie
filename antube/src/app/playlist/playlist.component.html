@@ -1,6 +1,18 @@
 <app-nav></app-nav>
-<main>
-    <section *ngFor="let p of fav">
-        <iframe [src]="url1+p.videoId | safe"></iframe>
+<main class="">
+    <section class="row  ml-5  pt-4 mt-5 mr-5" *ngFor="let p of fav">
+        <section class="col-sm-3 ml-2 mr-2">
+            <iframe class="mt-2 mb-2 ml-1 mr-1" [src]="url1+p.videoId | safe"></iframe>
+        </section>
+        <section class="col-sm-8 ml-2 mr-2 ">
+            <a [routerLink]="[ '/video',p.videoId+p.title]"><h4 class="font-weight-bold">{{p.title}}</h4></a>
+            <br>
+            <p><span class="text-capitalize">{{com }}</span>{{p.comments}}</p>
+            <hr>
+            <button class="btn btn-success mr-5" (click)="editcom(p.id,p.videoId,p.title)">Edit Comments</button>
+            <button  class="btn btn-danger" (click)="remove(p.id)">Remove from Playlist</button>
+
+        </section>
+       
     </section>
 </main>

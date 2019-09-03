@@ -1,12 +1,29 @@
 <app-nav></app-nav>
-<main class="mt-5"> 
+<main class="mt-5 pt-4"> 
         <section class=""><h2 class="ml-2 mr-2 ">{{title}}</h2></section>
        <section > <iframe  class="ml-2 mr-2  "  [src]="videoId | safe"></iframe></section>
-        <section>
-       <button class=" ml-2" (click)="showdes()">Description</button>
-       <button (click)="addto(v_id)">Add to favourites</button>
-       </section>
-       <section class="container-fluid">
-           <h3 class="text-uppercase">{{d}}</h3>
-           <p>{{my_desc}}</p></section>
+        <section class="row"> 
+            <section class="col-sm-9">
+                <button class=" ml-2 btn btn-info mr-5 mb-1" (click)="showdes()">Description</button>
+                <button class="ml-2 btn btn-success mb-1" (click)="addto(v_id,title)">Add to Playlist</button>
+                
+                
+                <section class="container-fluid">
+                    
+                    <h5 class="text-uppercase font-weight-bold">{{chn}}</h5>
+                    <p>{{channelID}}</p>
+                    <h5 class="text-uppercase font-weight-bold">{{d}}</h5>
+                    <p>{{my_desc}}</p></section>
+        </section>
+           <section class="col-sm-2 mt-5 ml-2">
+                <h5 class="text-uppercase font-weight-bold">{{pb}}</h5>
+                <p>{{publish}}</p>
+                <h5 class="text-uppercase font-weight-bold">{{vw}}</h5>
+                <p>{{view}}</p>
+                <h5 class="text-uppercase font-weight-bold">{{l}}</h5>
+                <p>{{like}}</p>
+                <h5 class="text-uppercase font-weight-bold">{{dl}}</h5>
+                <p>{{dislike}}</p>
+            </section>
+        </section>
     </main>

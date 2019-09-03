@@ -1,14 +1,25 @@
-main section {
-    margin-right: 50px ;
-}
+
 main section img{
-    height:400px;
+    height:300px;
 }
-main section section {
-    height:350px;
-    
-    
-}
+
 main section section a img{
     height:200px;
+}
+
+main section section a iframe{
+    height: 300px;
+    width: 100%;
+}
+
+.card{
+    width:100%;
+}
+.card-body
+{
+    height:100px;
+}
+.card-footer
+{
+    background-color: white;
 }

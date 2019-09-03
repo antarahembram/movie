@@ -1,4 +1,11 @@
 
-main section section a img{
-    height: 150px;
+main section section{
+    background-color: whitesmoke  ;
+    
+}
+main section section a{
+    color:black;
+}
+main section section iframe{
+    width: 95%;
 }

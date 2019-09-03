@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
 import { YoutubeService } from '../youtube.service';
+import { TouchSequence } from 'selenium-webdriver';
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {
   constructor(private sanitizer: DomSanitizer) {}
@@ -44,7 +45,14 @@ export class VideoComponent implements OnInit {
 
   }
   public my_desc="";
+  channelID="";
+  like="";
+  dislike="";
+  publish="";
+  view="";
   public d="";
+  chn="";l="";dl="";vw="";pb="";
+  //To display the description of the video
   showdes()
   {
       this._youtubeservice.getdata(this.v_id)
@@ -52,15 +60,33 @@ export class VideoComponent implements OnInit {
           this.data_s=res;
           console.log(this.data_s);
           this.my_desc=this.data_s.items[0].snippet.description;
+          this.channelID=this.data_s.items[0].snippet.channelTitle;
+          this.publish=this.data_s.items[0].snippet.publishedAt;
+          this.view=this.data_s.items[0].statistics.viewCount;
+          this.like=this.data_s.items[0].statistics.likeCount;
+
+          this.dislike=this.data_s.items[0].statistics.dislikeCount;
+
+
+          // this.rmpl.splice(this.rmpl.indexOf(i),1);
         });
         this.d="description";
+        this.chn="channel id";
+        this.vw="views";
+        this.l="like";
+        this.dl="dislike";
+        this.pb="published at";
   
       
   }
-  addto(value)
+  //function to add video in the playlist
+  public playlist;
+  addto(value1,value2)
   {
-    console.log(this.v_id);
-    this._youtubeservice.add_fav(this.v_id);
+    let value3=window.prompt("Item has been added to the Playlist  \n Add some comments here");
+    this._youtubeservice.add_fav(value1,value2,value3);
+    
+
   }
 
 

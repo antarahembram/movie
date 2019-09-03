@@ -17,6 +17,7 @@ export class NavComponent implements OnInit {
   {
     this.id=value;
     this.router.navigate(['search',this.id]);
+    //window.location.reload();
   }
 
 }
