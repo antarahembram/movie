@@ -5,7 +5,34 @@
         <section class="row"> 
             <section class="col-sm-9">
                 <button class=" ml-2 btn btn-info mr-5 mb-1" (click)="showdes()">Description</button>
-                <button class="ml-2 btn btn-success mb-1" (click)="addto(v_id,title)">Add to Playlist</button>
+                <button type="button" (click)=addto(v.id,v.snippet.title) class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Add to Playlist
+                      </button>
+                    
+                      <!-- The Modal -->
+                      <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-sm">
+                          <div class="modal-content">
+                          
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Go to Playlist</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              Video has been added to Playlist
+                            </div>
+                            
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
                 
                 
                 <section class="container-fluid">

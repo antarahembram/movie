@@ -37,13 +37,15 @@ export class HomeComponent implements OnInit {
           });
           
   }
+  public m='';
   addto(value1,value2)
   {
     console.log(value1);
     console.log(value2);
-
-    let value3=window.prompt("Item has been added to the Playlist \n Add some comments here");
-    this._youtubeservice.add_fav(value1,value2,value3);
+    this.m=value2;
+    console.log(this.m);
+    //let value3=window.prompt("Item has been added to the Playlist \n Add some comments here");
+    this._youtubeservice.add_fav(value1,value2);
    // this.router.navigate(['playlist']);
     
     //window.location.reload();

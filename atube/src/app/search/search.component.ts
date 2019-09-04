@@ -35,8 +35,8 @@ export class SearchComponent implements OnInit {
   addto(value1,value2)
   {
     
-    let value3=window.prompt("Item has been added to the Playlist  \n Add some comments here");
-    this._youtubeservice.add_fav(value1,value2,value3);
+   // let value3=window.prompt("Item has been added to the Playlist  \n Add some comments here");
+    this._youtubeservice.add_fav(value1,value2);
   }
   
 }

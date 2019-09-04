@@ -24,6 +24,7 @@ export class PlaylistComponent implements OnInit {
   public videos;
   public url1='https://www.youtube.com/embed/';
   public com='comments: ';
+  public com_done=true;
   ngOnInit() {
     this._youtubeservice.get_fav()
       .subscribe((res)=>{console.log(res);
@@ -49,7 +50,9 @@ export class PlaylistComponent implements OnInit {
   {
     let value4=window.prompt("Write here");
     this._youtubeservice.edit(value1,value2,value3,value4);
-    window.location.reload();
+     //this.com_done=false;
+
+ //   window.location.reload();
 
   }
 

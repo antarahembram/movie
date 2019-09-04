@@ -9,8 +9,17 @@
             <br>
             <p><span class="text-capitalize">{{com }}</span>{{p.comments}}</p>
             <hr>
-            <button class="btn btn-success mr-5" (click)="editcom(p.id,p.videoId,p.title)">Edit Comments</button>
+            <section *ngIf="com_done ; then comblock; else editblock"> </section>
+                    <ng-template #comblock>
+                        <input #comment type="text">
+                        <button class="btn btn-success mr-5" (click)="editcom(p.id,p.videoId,comment.value)">Add Comments</button>
+                    </ng-template> 
+                    <ng-template #editblock>
+                        <button class="btn btn-success mr-5" (click)="editcom(p.id,p.videoId,p.title)">Edit Comments</button>
+                    </ng-template>     
+               
             <button  class="btn btn-danger" (click)="remove(p.id)">Remove from Playlist</button>
+
 
         </section>
        

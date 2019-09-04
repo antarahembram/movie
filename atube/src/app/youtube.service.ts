@@ -40,12 +40,12 @@ export class YoutubeService {
     title:'',
     comments:'',
   };
-  add_fav(value1,value2,value3)
+  add_fav(value1,value2)
   {
     //console.log(this.data);
     this.data.videoId=value1;
     this.data.title=value2;
-    this.data.comments=value3;
+  //  this.data.comments=value3;
 
     //console.log(this.data);
     this.http.post(this.json_url,this.data).toPromise();
